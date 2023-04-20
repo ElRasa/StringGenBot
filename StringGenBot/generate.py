@@ -25,21 +25,26 @@ import config
 
 
 
-ask_ques = "**» ᴩʟᴇᴀsᴇ ᴄʜᴏᴏsᴇ ᴛʜᴇ ᴩʏᴛʜᴏɴ ʟɪʙʀᴀʀʏ ғᴏʀ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ sᴛʀɪɴɢ :**"
+ask_ques = "**» 📟اذا كنـت تـريد تنـصيـب
+◍ مـيوزك فـأختـار كــود بـايـروجـرام
+◍ التليثون فـأخـتار كــود تيرمكـس
+
+◍ يتضمن ايضا البوت 
+-: جلسه ميوزك قديمه وحديث. يوجد جلسات للبوتات بلاسفل:**"
 buttons_ques = [
     [
-        InlineKeyboardButton("ᴩʏʀᴏɢʀᴀᴍ", callback_data="pyrogram"),
-        InlineKeyboardButton("ᴛᴇʟᴇᴛʜᴏɴ", callback_data="telethon"),
+        InlineKeyboardButton("🎙️: بـآيــروجــرآم", callback_data="pyrogram"),
+        InlineKeyboardButton("👾: تـيرمـكس", callback_data="telethon"),
     ],
     [
-        InlineKeyboardButton("ᴩʏʀᴏɢʀᴀᴍ ʙᴏᴛ", callback_data="pyrogram_bot"),
-        InlineKeyboardButton("ᴛᴇʟᴇᴛʜᴏɴ ʙᴏᴛ", callback_data="telethon_bot"),
+        InlineKeyboardButton("💻: بـآيــروجــرآم للبــوت", callback_data="pyrogram_bot"),
+        InlineKeyboardButton("🤖: تـيرمـكس للبـــوت", callback_data="telethon_bot"),
     ],
 ]
 
 gen_button = [
     [
-        InlineKeyboardButton(text="🙄 ɢᴇɴᴇʀᴀᴛᴇ sᴇssɪᴏɴ 🙄", callback_data="generate")
+        InlineKeyboardButton(text="🌐:آضـغـــط لَبــدآ آًستـــخـرآج كود", callback_data="generate")
     ]
 ]
 
@@ -53,12 +58,12 @@ async def main(_, msg):
 
 async def generate_session(bot: Client, msg: Message, telethon=False, is_bot: bool = False):
     if telethon:
-        ty = "ᴛᴇʟᴇᴛʜᴏɴ"
+        ty = "👾: تـيرمـكس"
     else:
-        ty = "ᴩʏʀᴏɢʀᴀᴍ"
+        ty = "🎙️: بـآيــروجــرآم"
     if is_bot:
-        ty += " ʙᴏᴛ"
-    await msg.reply(f"» ᴛʀʏɪɴɢ ᴛᴏ sᴛᴀʀᴛ **{ty}** sᴇssɪᴏɴ ɢᴇɴᴇʀᴀᴛᴏʀ...")
+        ty += " بـــوت"
+    await msg.reply(f"◍  استخراج جلسه **{ty}** من البوت...√")
     user_id = msg.chat.id
     api_id_msg = await bot.ask(user_id, "ᴩʟᴇᴀsᴇ sᴇɴᴅ ʏᴏᴜʀ **ᴀᴩɪ_ɪᴅ** ᴛᴏ ᴩʀᴏᴄᴇᴇᴅ.\n\nᴄʟɪᴄᴋ ᴏɴ /skip ғᴏʀ ᴜsɪɴɢ ʙᴏᴛ's ᴀᴘɪ.", filters=filters.text)
     if await cancelled(api_id_msg):
