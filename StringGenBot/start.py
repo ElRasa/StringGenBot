@@ -25,11 +25,11 @@ async def start(bot: Client, msg: Message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(text="🌐:آضـغـــط لَبــدآ آًستـــخـرآج كود", callback_data="generate")
+                    InlineKeyboardButton(text="🙄آًسـتخرج آلجلـسة🙄", callback_data="generate")
                 ],
                 [
-                    InlineKeyboardButton("ً⚙ً.. آلـســــورس", url="https://t.me/Ve_m1"),
-                    InlineKeyboardButton("ᯓ『 𝙀𝙇𝙍𝘼𝙎𝘼𝙈 ‌𝅘𝅥𝅯』🏴󠁧󠁢󠁥󠁮󠁧󠁿𓆃", user_id=OWNER_ID)
+                    InlineKeyboardButton("❣️ًسًــــــورس❣️", url="https://t.me/Ve_m1"),
+                    InlineKeyboardButton("🥀 ألـمہطوُر 🥀", user_id=OWNER_ID)
                 ]
             ]
         ),
